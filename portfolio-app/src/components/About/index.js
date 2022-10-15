@@ -1,5 +1,5 @@
 import React from "react";
-import coverImage from "../../src/assets/cover/cover-image.jpg";
+import coverImage from "../../../src/assets/cover/cover-image.jpg";
 
 const About = () => {
     return (
