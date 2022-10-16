@@ -6,38 +6,38 @@ const PhotoList = ({ category }) => {
             name: 'ShowGo',
             category: 'portfolio',
             description:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
+                'Project 1'
         },
         {
             name: 'Upgrad',
             category: 'portfolio',
             description:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
+                'Project 2'
         },
         {
             name: 'Weather App',
             category: 'portfolio',
             description:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
+                'Shows a 5 day forecast, city of your choosing'
         },
-        // {
-        //     name: 'proj 4',
-        //     category: 'Portfolio',
-        //     description:
-        //         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
-        // },
-        // {
-        //     name: 'Proj 5',
-        //     category: 'portfolio',
-        //     description:
-        //         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
-        // },
-        // {
-        //     name: 'Proj 6',
-        //     category: 'portfolio',
-        //     description:
-        //         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
-        // },
+        {
+            name: 'Work Day Scheduler',
+            category: 'portfolio',
+            description:
+                'Easily schedule your day with this daily planner'
+        },
+        {
+            name: 'Note taker',
+            category: 'portfolio',
+            description:
+                'Keep track of all your thoughts with this note keeper application'
+        },
+        {
+            name: 'Team Generator',
+            category: 'portfolio',
+            description:
+                'Use the comand line to create and organize your organizations structure'
+        },
     ]);
 
     const currentPhotos = photos.filter(photo => photo.category === category);
