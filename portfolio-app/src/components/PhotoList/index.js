@@ -20,24 +20,24 @@ const PhotoList = ({ category }) => {
             description:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
         },
-        {
-            name: 'proj 4',
-            category: 'Portfolio',
-            description:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
-        },
-        {
-            name: 'Proj 5',
-            category: 'portfolio',
-            description:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
-        },
-        {
-            name: 'Proj 6',
-            category: 'portfolio',
-            description:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
-        },
+        // {
+        //     name: 'proj 4',
+        //     category: 'Portfolio',
+        //     description:
+        //         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
+        // },
+        // {
+        //     name: 'Proj 5',
+        //     category: 'portfolio',
+        //     description:
+        //         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
+        // },
+        // {
+        //     name: 'Proj 6',
+        //     category: 'portfolio',
+        //     description:
+        //         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
+        // },
     ]);
 
     const currentPhotos = photos.filter(photo => photo.category === category);
@@ -46,7 +46,7 @@ const PhotoList = ({ category }) => {
             <div className="flex-row">
                 {currentPhotos.map((image, i) => (
                     <img
-                        src={require(`../../assets/portfolio/${category}/${i}.png`).default}
+                        src={require(`../../../src/assets/${category}/${i}.jpg`)}
                         alt={image.name}
                         className="img-thumbnail mx-1"
                         key={image.name}
