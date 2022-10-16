@@ -13,7 +13,7 @@ const Nav = (props) => {
         <header className="flex-row px-1">
             <h2>
                 <a data-testid="link" href="/">
-                    <span role="img" aria-label="camera"> 📸</span> Sonja
+                    <span role="img" aria-label="camera"></span> Sonja
                 </a>
             </h2>
             <nav>
@@ -22,11 +22,6 @@ const Nav = (props) => {
                         <a data-testid="about" href="#about" onClick={() => setContactSelected(false)}>
                             About me
                         </a>
-                    </li>
-                    <li className={`mx-2 ${contactSelected && 'navActive'}`}>
-                        <span onClick={() => setContactSelected(true)}>
-                            Contact
-                        </span>
                     </li>
                     {categories.map((category) => (
                         <li
@@ -44,6 +39,16 @@ const Nav = (props) => {
                             </span>
                         </li>
                     ))}
+                    <li className={`mx-2 ${contactSelected && 'navActive'}`}>
+                        <span onClick={() => setContactSelected(true)}>
+                            Contact
+                        </span>
+                    </li>
+                    <li className={`mx-2 ${!contactSelected && 'navActive'}`}>
+                        <span onClick={() => setContactSelected(false)}>
+                            Resume
+                        </span>
+                    </li>
                 </ul>
             </nav>
         </header>

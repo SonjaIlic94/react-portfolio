@@ -3,9 +3,11 @@ import React, { useState } from 'react'
 import './App.css';
 import Nav from './components/Nav'
 import About from './components/About'
-import Gallery from "./components/Gallery";
+import Gallery from "./components/Gallery"
 import ContactForm from "./components/Contact"
+import Resume from "./components/Resume"
 import Footer from "./components/Footer"
+
 
 function App() {
   const [categories] = useState([
@@ -13,10 +15,10 @@ function App() {
       name: "portfolio",
       description: "Sonja's portfolio!",
     },
-    {
-      name: "Resume",
-      description: "Best Resume Ever"
-    },
+    // {
+    //   name: "Resume",
+    //   description: "Best Resume Ever"
+    // },
   ]);
   const [currentCategory, setCurrentCategory] = useState(categories[0]);
 
@@ -36,10 +38,12 @@ function App() {
           <>
             <Gallery currentCategory={currentCategory}></Gallery>
             <About></About>
+            <Resume></Resume>
           </>
         ) : (
           <ContactForm></ContactForm>
         )}
+
         <Footer></Footer>
       </main>
 
