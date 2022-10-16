@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 // import logo from './logo.svg';
 import './App.css';
 import Nav from './components/Nav'
@@ -6,11 +6,27 @@ import About from './components/About'
 import Gallery from "./components/Gallery";
 
 function App() {
+  const [categories] = useState([
+    {
+      name: "portfolio",
+      description: "Sonja's portfolio!",
+    },
+    {
+      name: "Resume",
+      description: "Best Resume Ever"
+    },
+  ]);
+  const [currentCategory, setCurrentCategory] = useState(categories[0]);
+
   return (
     <div>
-      <Nav></Nav>
+      <Nav
+        categories={categories}
+        setCurrentCategory={setCurrentCategory}
+        currentCategory={currentCategory}
+      ></Nav>
       <main>
-        <Gallery></Gallery>
+        <Gallery currentCategory={currentCategory}></Gallery>
         <About></About>
       </main>
 

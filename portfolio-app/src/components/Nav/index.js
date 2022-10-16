@@ -1,44 +1,47 @@
 import React from "react";
 
-function categorySelected() {
-    console.log("clicked")
-}
+const Nav = (props) => {
+    const {
+        categories = [],
+        setCurrentCategory,
+        currentCategory,
+    } = props;
 
-const Nav = () => {
-
-    const categories = [
-        {
-            name: "Contact",
-            description: "Sonja's Contact Info!",
-        },
-        {
-            name: "Resume",
-            description: "Best Resume Ever"
-        },
-    ];
-    const handleClick = () => {
-        console.log("click handled")
+    const handleClick = (item) => {
+        console.log(item);
+        return item;
     }
+
     return (
-        <header data-testid="header" className="flex-row px-1">
+        <header className="flex-row px-1">
             <h2>
-                <a href="/">
-                    <span role="img" aria-label="camera"> 📸</span> Sonja
+                <a data-testid="link" href="/">
+                    <span role="img" aria-label="camera"> 📸</span> Oh Snap!
                 </a>
             </h2>
             <nav>
                 <ul className="flex-row">
                     <li className="mx-2">
-                        <a href="#about" onClick={() => handleClick()}>
+                        <a data-testid="about" href="#about">
                             About me
                         </a>
                     </li>
                     <li className={"mx-2"}>
-                        <span onClick={() => handleClick()}>Portfolio</span>
+                        <span onClick={() => handleClick('Contact')}>
+                            Contact
+                        </span>
                     </li>
                     {categories.map((category) => (
-                        <li className="mx-1" key={category.name}>
-                            <span onClick={categorySelected}>
+                        <li
+                            className={`mx-1 ${currentCategory.name === category.name
+                                }`}
+                            key={category.name}
+                        >
+                            <span
+                                onClick={() => {
+                                    setCurrentCategory(category);
+                                }}
+                            >
                                 {category.name}
                             </span>
                         </li>
