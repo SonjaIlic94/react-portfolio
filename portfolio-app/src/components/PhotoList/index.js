@@ -5,14 +5,16 @@ const PhotoList = ({ category }) => {
         {
             name: 'ShowGo',
             category: 'portfolio',
-            description:
-                'Project 1'
+            description: 'Project 1',
+            link: 'https://sonjaIlic94.github.io/ShowGo/'
+
         },
         {
             name: 'Upgrad',
             category: 'portfolio',
             description:
-                'Project 2'
+                'Project 2',
+            link: "https://www.google.com"
         },
         {
             name: 'Weather App',
@@ -40,17 +42,19 @@ const PhotoList = ({ category }) => {
         },
     ]);
 
-    const currentPhotos = photos.filter(photo => photo.category === category);
+    const currentPhotos = photos.filter(photo => photo.name === photo.name);
+    console.log(currentPhotos);
     return (
         <div>
             <div className="flex-row">
                 {currentPhotos.map((image, i) => (
-                    <img
-                        src={require(`../../../src/assets/${category}/${i}.jpg`)}
-                        alt={image.name}
-                        className="img-thumbnail mx-1"
-                        key={image.name}
-                    />
+                    < a href={image.link}>
+                        <img
+                            src={require(`../../../src/assets/${image.category}/${i}.jpg`)}
+                            alt={image.name}
+                            className="img-thumbnail mx-1"
+                            key={image.name}
+                        /></a>
                 ))}
             </div>
         </div>

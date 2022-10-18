@@ -18,11 +18,11 @@ const Nav = (props) => {
             </h2>
             <nav>
                 <ul className="flex-row">
-                    <li className="mx-2">
+                    {/* <li className="mx-2">
                         <a data-testid="about" href="#about" onClick={() => setContactSelected(false)}>
                             About me
                         </a>
-                    </li>
+                    </li> */}
                     {categories.map((category) => (
                         <li
                             className={`mx-1 ${currentCategory.name === category.name && !contactSelected && `navActive`
@@ -44,11 +44,11 @@ const Nav = (props) => {
                             Contact
                         </span>
                     </li>
-                    <li className={`mx-2 ${!contactSelected && 'navActive'}`}>
+                    {/* <li className={`mx-2 ${!contactSelected && 'navActive'}`}>
                         <span onClick={() => setContactSelected(false)}>
                             Resume
                         </span>
-                    </li>
+                    </li> */}
                 </ul>
             </nav>
         </header>

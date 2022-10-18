@@ -1,24 +1,31 @@
 import React, { useState } from 'react'
-// import logo from './logo.svg';
-import './App.css';
 import Nav from './components/Nav'
-import About from './components/About'
-import Gallery from "./components/Gallery"
+// import About from './components/About'
+// import Gallery from "./components/Gallery"
 import ContactForm from "./components/Contact"
-import Resume from "./components/Resume"
+// import Resume from "./components/Resume"
 import Footer from "./components/Footer"
-
+import Page from "./components/Page"
 
 function App() {
   const [categories] = useState([
     {
+      name: "about",
+      description: "about"
+
+    },
+    {
+      name: "resume",
+      description: "Best Resume Ever adfasdfasdf https://sonjaIlic94.github.io/ShowGo/"
+    },
+    {
+      name: "gallery",
+      description: "gallery"
+    },
+    {
       name: "portfolio",
       description: "Sonja's portfolio!",
     },
-    // {
-    //   name: "Resume",
-    //   description: "Best Resume Ever"
-    // },
   ]);
   const [currentCategory, setCurrentCategory] = useState(categories[0]);
 
@@ -36,9 +43,10 @@ function App() {
       <main>
         {!contactSelected ? (
           <>
-            <Gallery currentCategory={currentCategory}></Gallery>
+            <Page currentCategory={currentCategory}></Page>
+            {/* <Gallery currentCategory={currentCategory}></Gallery>
             <About></About>
-            <Resume></Resume>
+            <Resume></Resume> */}
           </>
         ) : (
           <ContactForm></ContactForm>
