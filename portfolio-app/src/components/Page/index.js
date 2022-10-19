@@ -1,8 +1,8 @@
 import React from 'react'
 import About from '../About'
-import Contact from '../Contact'
+// import Contact from '../Contact'
 import Resume from '../Resume'
-import Gallery from '../Gallery'
+// import Gallery from '../Gallery'
 import PageContent from '../PageContent'
 import PhotoList from '../PhotoList'
 
@@ -10,13 +10,11 @@ function Page({ currentCategory }) {
 
     const renderPage = () => {
         switch (currentCategory.name) {
-            case 'about':
+            case 'About':
                 return <About />;
-            case 'gallery':
+            case 'Portfolio':
                 return <PhotoList />;
-            case 'contact':
-                return <Contact />;
-            case 'resume':
+            case 'Resume':
                 return <Resume />;
             default:
                 return <About />;

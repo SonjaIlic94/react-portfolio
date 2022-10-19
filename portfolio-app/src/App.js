@@ -10,22 +10,20 @@ import Page from "./components/Page"
 function App() {
   const [categories] = useState([
     {
-      name: "about",
+      name: "About",
       description: "about"
 
     },
     {
-      name: "resume",
-      description: "Best Resume Ever adfasdfasdf https://sonjaIlic94.github.io/ShowGo/"
-    },
-    {
-      name: "gallery",
+      name: "Portfolio",
       description: "gallery"
     },
     {
-      name: "portfolio",
-      description: "Sonja's portfolio!",
+      name: "Resume",
+      description: "Best Resume Ever adfasdfasdf https://sonjaIlic94.github.io/ShowGo/"
     },
+
+
   ]);
   const [currentCategory, setCurrentCategory] = useState(categories[0]);
 

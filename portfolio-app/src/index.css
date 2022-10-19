@@ -190,6 +190,7 @@ textarea {
 .flex-row {
   display: flex;
   flex-wrap: wrap;
+  padding: 5px;
 }
 
 .space-between {
@@ -311,4 +312,22 @@ a {
 
 nav {
   background-color: #0005;
+}
+
+.photo-container {
+  padding: 20px;
+}
+
+.footer-icons {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cover-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
 }

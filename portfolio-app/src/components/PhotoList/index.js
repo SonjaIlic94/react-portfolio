@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
-const PhotoList = ({ category }) => {
+const PhotoList = ({ }) => {
     const [photos] = useState([
         {
             name: 'ShowGo',
             category: 'portfolio',
-            description: 'Project 1',
+            description: 'Find events in your city with your Spotify Username.  ',
             link: 'https://sonjaIlic94.github.io/ShowGo/'
 
         },
@@ -13,32 +13,36 @@ const PhotoList = ({ category }) => {
             name: 'Upgrad',
             category: 'portfolio',
             description:
-                'Project 2',
-            link: "https://www.google.com"
+                'Connect with other grad students',
+            link: "https://fathomless-scrubland-35301.herokuapp.com/"
         },
         {
             name: 'Weather App',
             category: 'portfolio',
             description:
-                'Shows a 5 day forecast, city of your choosing'
+                'Shows a 5 day forecast, city of your choosing',
+            link: 'https://sonjailic94.github.io/Weather-Dashboard/'
         },
         {
             name: 'Work Day Scheduler',
             category: 'portfolio',
             description:
-                'Easily schedule your day with this daily planner'
+                'Easily schedule your day with this daily planner',
+            link: 'https://sonjailic94.github.io/work-day-scheduler/'
         },
         {
             name: 'Note taker',
             category: 'portfolio',
             description:
-                'Keep track of all your thoughts with this note keeper application'
+                'Keep track of all your thoughts.',
+            link: 'https://mysterious-crag-91476.herokuapp.com/'
         },
         {
             name: 'Team Generator',
             category: 'portfolio',
             description:
-                'Use the comand line to create and organize your organizations structure'
+                'Use the command line to create a team.',
+            link: 'https://sonjailic94.github.io/team-gen/ '
         },
     ]);
 
@@ -48,13 +52,19 @@ const PhotoList = ({ category }) => {
         <div>
             <div className="flex-row">
                 {currentPhotos.map((image, i) => (
-                    < a href={image.link}>
-                        <img
-                            src={require(`../../../src/assets/${image.category}/${i}.jpg`)}
-                            alt={image.name}
-                            className="img-thumbnail mx-1"
-                            key={image.name}
-                        /></a>
+                    <p className='photo-container'>
+
+                        <h1>{image.name}</h1>
+                        <h6 className="photo-description"> {image.description}</h6>
+                        < a href={image.link}>
+                            <img
+                                src={require(`../../../src/assets/${image.category}/${i}.jpg`)}
+                                alt={image.name}
+                                className="img-thumbnail mx-1"
+                                key={image.name}
+                            /></a>
+
+                    </p>
                 ))}
             </div>
         </div>
