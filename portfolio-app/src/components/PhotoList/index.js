@@ -44,6 +44,13 @@ const PhotoList = ({ }) => {
                 'Use the command line to create a team.',
             link: 'https://sonjailic94.github.io/team-gen/ '
         },
+        {
+            name: 'Project 3',
+            category: 'portfolio',
+            description:
+                'Rescue Chow.',
+            link: 'https://boiling-depths-73128.herokuapp.com/ '
+        },
     ]);
 
     const currentPhotos = photos.filter(photo => photo.name === photo.name);
